@@ -1,0 +1,32 @@
+{
+  "name": "week-six-project",
+  "version": "1.0.0",
+  "description": "Week 6 Project:  Build a Social Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlporter/week-six-project.git"
+  },
+  "keywords": [],
+  "author": "rebekkahporter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlporter/week-six-project/issues"
+  },
+  "homepage": "https://github.com/rlporter/week-six-project#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5",
+    "pg": "^6.4.0",
+    "sequelize": "^4.2.1"
+  }
+}

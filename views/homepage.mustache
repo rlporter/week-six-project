@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabble Homepage</title>
+    <link rel="stylesheet" href="../public/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./homepage.mustache">Gabble</a>
+        <p>|</p>
+        <a href="./newgab.mustache">Create a new gab</a>
+        <p>|</p>
+        <a href="./login.mustache">Logged in as {{displayName}}</a>
+        <p>|</p>
+        <a href="./homepage.mustache">Log out</a>
+      </nav>
+    </header>
+
+    <div class="message_container">
+      {{#messages}}
+      <p>{{users.disaplyName}}: {{messages.messageText}}</p>
+      <br />
+      <p>{{message.createdAt}}</p>
+      <br />
+      {{#likes}}
+      <p>{{likeCount}} like(s)</p>
+        {{^likes}}
+        <p>No likes yet.</p>
+        {{/likes}}
+      {{/likes}}
+      {{/messages}}
+    </div>
+    <div class="button_container">
+      <input type="submit" name="like_button" value="Like" />
+      <input type="submit" name="delete_button" value="Delete" />
+    </div>
+    <hr />
+
+
+    <script src="../app.js"></script>
+  </body>
+</html>

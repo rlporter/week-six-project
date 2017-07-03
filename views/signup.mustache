@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabble Sign Up Page</title>
+    <link rel="stylesheet" href="../public/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./homepage.mustache">Gabble</a>
+        <p>|</p>
+        <a href="./newgab.mustache">Create a new gab</a>
+        <p>|</p>
+        <a href="./login.mustache">Log in</a>
+        <p>|</p>
+        <a href="./signup.mustache">Sign up</a>
+      </nav>
+    </header>
+    <h1>Sign Up to Gab!</h1>
+    <form action="../models/users.js" method=POST>
+      {{#users}}
+      <label>First Name</label>
+      <input type="text" name="displayName" placeholder="Enter your first name" />
+
+      <label>Username</label>
+      <input type="text" name="username" placeholder="Pick a username of at least eight characters" />
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter a password" />
+
+      <label>Confirm password</label>
+      <input type="password" name="confirm_password" placeholder="Confirm password entered above" />
+      {{/users}}
+      <input type="submit" name="signup_button" value="Sign up" />
+
+    </form>
+
+    <script src="../app.js"></script>
+
+  </body>
+</html>
