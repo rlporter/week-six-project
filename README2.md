@@ -25,3 +25,17 @@ In message.js//Message.hasMany(Like, {through: 'Likes', foreignKey: 'messageID',
 
 A like BelongsToMany users:
 In like.js//Like.belongsTo(User, {through: 'Messages', foreignKey: 'messageID', otherKey: 'userID'});
+
+/ module.exports = function(sequelize, DataTypes) {
+//   var Todo = sequelize.define('Todo', {
+//     body: {
+//       text: DataTypes.STRING,
+//       allowNull: false
+//     }
+//   }, {});
+//
+//   Todo.associate = function (models) {
+//     Todo.belongsTo(models.User, {foreignKey: 'userId'});
+//   }
+//   return Todo;
+// };
